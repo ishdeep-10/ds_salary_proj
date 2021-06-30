@@ -59,6 +59,10 @@ df['aws_yn'] = df['Job Description'].apply(lambda x: 1 if 'aws' in x.lower() els
 
 
 df.drop('Unnamed: 0',axis=1,inplace=True)
+df_out = df
+df_out.to_csv('salary_data_cleaned.csv',index=False)
+
+pd.read_csv('salary_data_cleaned.csv')
 
 
 
